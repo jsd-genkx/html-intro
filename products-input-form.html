@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Product Information Form</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				background-color: #f0f5f9;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+			}
+
+			form {
+				background-color: #fff;
+				padding: 20px;
+				border-radius: 10px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+				max-width: 400px;
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+
+			form fieldset {
+				border: none;
+				padding: 0;
+				margin: 0;
+				margin-bottom: 20px;
+			}
+
+			form legend {
+				font-size: 1.2em;
+				font-weight: bold;
+				margin-bottom: 10px;
+				color: #333;
+			}
+
+			form div {
+				display: flex;
+				flex-direction: column;
+				margin-bottom: 15px;
+			}
+
+			form label {
+				margin-bottom: 5px;
+				color: #555;
+			}
+
+			form input[type="text"],
+			form input[type="number"],
+			form select {
+				padding: 10px;
+				border: 1px solid #ccc;
+				border-radius: 5px;
+				outline: none;
+			}
+
+			form select {
+				cursor: pointer;
+			}
+
+			form input[type="submit"] {
+				padding: 10px 20px;
+				border: none;
+				border-radius: 5px;
+				background-color: #007bff;
+				color: #fff;
+				cursor: pointer;
+				transition: background-color 0.3s;
+				margin-top: 10px;
+			}
+
+			form input[type="reset"] {
+				padding: 10px 20px;
+				border: none;
+				border-radius: 5px;
+				background-color: #dc3545;
+				color: #fff;
+				cursor: pointer;
+				transition: background-color 0.3s;
+				margin-top: 10px;
+			}
+
+			form input[type="submit"]:hover {
+				background-color: #0056b3;
+			}
+
+			form input[type="reset"]:hover {
+				background-color: #c82333;
+			}
+		</style>
+	</head>
+	<body>
+		<form
+			id="productForm"
+			action="#"
+			method="post"
+		>
+			<fieldset>
+				<legend>Product Information Form</legend>
+				<div>
+					<label for="productName">Product Name:</label>
+					<input
+						type="text"
+						id="productName"
+						name="productName"
+						value=""
+						required
+					/>
+				</div>
+				<div>
+					<label for="productBrand">Product Brand:</label>
+					<input
+						type="text"
+						id="productBrand"
+						name="productBrand"
+						value=""
+					/>
+				</div>
+				<div>
+					<label for="sizeOrQuantity">Size or Quantity:</label>
+					<input
+						type="text"
+						id="sizeOrQuantity"
+						name="sizeOrQuantity"
+						value=""
+					/>
+				</div>
+				<div>
+					<label for="tasteOrScent">Taste or Scent:</label>
+					<input
+						type="text"
+						id="tasteOrScent"
+						name="tasteOrScent"
+						value=""
+					/>
+				</div>
+				<div>
+					<label for="color">Color:</label>
+					<input
+						type="text"
+						id="color"
+						name="color"
+						value=""
+					/>
+				</div>
+				<div>
+					<label for="additionalDescription">Additional Description:</label>
+					<input
+						type="text"
+						id="additionalDescription"
+						name="additionalDescription"
+						value=""
+					/>
+				</div>
+				<div>
+					<label for="quantityInStock">Quantity in Stock:</label>
+					<input
+						type="number"
+						id="quantityInStock"
+						name="quantityInStock"
+						value="1"
+						min="0"
+						max="500"
+						step="1"
+					/>
+				</div>
+				<div>
+					<label for="unitPrice">Unit Price:</label>
+					<input
+						type="number"
+						id="unitPrice"
+						name="unitPrice"
+						step="0.01"
+						value="0.01"
+						min="0.01"
+					/>
+				</div>
+				<div>
+					<label for="category">Category:</label>
+					<select
+						id="category"
+						name="category"
+					>
+						<option value="1">Groceries</option>
+						<option value="2">Toiletries</option>
+						<option value="3">Stationery</option>
+						<option value="4">Household Cleaning Supplies</option>
+						<option value="5">Snacks and Beverages</option>
+					</select>
+				</div>
+			</fieldset>
+			<div>
+				<input
+					type="submit"
+					value="Submit"
+					id="submitButton"
+				/>
+				<input
+					type="reset"
+					value="Reset"
+					id="resetButton"
+				/>
+			</div>
+		</form>
+
+		<script>
+			document
+				.getElementById("productForm")
+				.addEventListener("submit", function (event) {
+					event.preventDefault();
+					alert("Form submitted!");
+				});
+
+			document
+				.getElementById("resetButton")
+				.addEventListener("click", function (event) {
+					document
+						.querySelectorAll(
+							'input[type="text"], input[type="number"], select'
+						)
+						.forEach(function (input) {
+							input.value = "";
+						});
+				});
+		</script>
+	</body>
+</html>

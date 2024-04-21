@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Form Example</title>
+  <link rel="stylesheet" href="basic-form-style.css">
+</head>
+
+<body>
+  <h1>Registration Form</h1>
+  <form>
+
+    <fieldset>
+      <legend>Account Information</legend>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="example@example.com" required>
+
+      <label for="quantity">Quantity:(1 to 10)</label>
+      <input type="number" id="quantity" name="quantity" min="1" max="10" required>
+    </fieldset>
+
+    <fieldset>
+      <legend>Preferences</legend>
+      <div class="checkbox-container">
+        <input type="checkbox" id="newsletter" name="newsletter">
+        <label for="newsletter">Subscribe to newsletter</label>
+      </div>
+
+
+      <div class="radio-container">
+        <input type="radio" id="male" name="gender" value="male" checked>
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+      </div>
+    </fieldset> 
+
+    <fieldset>
+      <legend>Contact Information</legend>
+      <label for="country">Country:</label>
+      <select id="country" name="country">
+        <option value="USA">United States</option>
+        <option value="Canada">Canada</option>
+        <option value="UK">United Kingdom</option>
+        <option value="Australia">Australia</option>
+      </select>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+
+      <label for="file">Choose a file:</label>
+      <input type="file" id="file" name="file" accept=".jpg, .png, .pdf" required>
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <label for="meeting-time">Meeting time:</label>
+      <input type="time" id="meeting-time" name="meeting-time" required>
+
+      <label for="color">Select a color:</label>
+      <input type="color" id="color" name="color" value="#ff0000" required>
+    </fieldset>
+
+    <div class="form-buttons button-container">
+      <button type="submit" class="submit-button">Submit</button>
+      <button type="reset" class="reset-button">Reset</button>
+    </div>
+    
+  </form>
+</body>
+
+</html>
