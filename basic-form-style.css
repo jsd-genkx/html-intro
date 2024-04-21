@@ -16,8 +16,8 @@ h1 {
 }
 
 form {
-	max-width: 60vw; 
-	margin: 0 auto; 
+	max-width: 60vw;
+	margin: 0 auto;
 }
 
 fieldset {
@@ -25,13 +25,13 @@ fieldset {
 	border-radius: 5px;
 	padding: 10px;
 	margin-bottom: 20px;
-	display: flex; 
-	flex-direction: column; 
+	display: flex;
+	flex-direction: column;
 }
 
 legend {
 	font-weight: bold;
-	margin-bottom: 10px; 
+	margin-bottom: 10px;
 }
 
 label {
@@ -47,13 +47,11 @@ textarea {
 	border-radius: 5px;
 }
 
-
 input[type="checkbox"],
 input[type="radio"] {
 	display: inline-block;
 	margin-right: 1rem;
 }
-
 
 .checkbox-container {
 	display: flex;
@@ -65,16 +63,15 @@ input[type="radio"] {
 .radio-container {
 	display: flex;
 	flex-wrap: wrap;
-	align-items: flex-start; 
+	align-items: flex-start;
 	justify-content: flex-start;
-	gap: 2rem; 
-
+	gap: 2rem;
+}
 
 .radio-container input[type="radio"] {
 	opacity: 0;
 	position: absolute;
 }
-
 
 .radio-container label {
 	display: flex;
@@ -82,10 +79,9 @@ input[type="radio"] {
 	cursor: pointer;
 }
 
-
 .radio-container label::before {
 	content: "";
-	display: inline-block; 
+	display: inline-block;
 	width: 1rem;
 	height: 1rem;
 	margin-right: 5px;
@@ -94,18 +90,15 @@ input[type="radio"] {
 	background-color: #fff;
 }
 
-
 .radio-container input[type="radio"]:checked + label::before {
 	background-color: #4caf50;
 	border-color: #4caf50;
 }
 
-
 .radio-container input[type="radio"]:checked:active + label::before {
 	background-color: #45a049;
 	border-color: #45a049;
 }
-
 
 .radio-container label:hover::before {
 	border-color: #888;
@@ -115,7 +108,6 @@ input[type="radio"] {
 	width: 5rem;
 	height: 3rem;
 }
-
 
 .form-buttons .submit-button {
 	background-color: #4caf50;
